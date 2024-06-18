@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+  <bean id="stid" class="com.Teacher.jdbc.TeacherPenExample.Student">
+    
+    <property name="id" value="1" />
+    <property name="name" value="sindu"/>
+    <property name="marks">
+      <list>
+      
+       <value>10</value>
+       <value>20</value>
+       <value>30</value>
+       <value>30</value>
+       <value>30</value>
+       <value>30</value>
+       <value>30</value>
+      </list>
+    
+    
+    </property>
+    <property name="books">
+      <list>
+       <ref bean="book1"></ref>
+       <ref bean="book2"></ref>
+      </list>
+    
+    
+    </property>
+    
+</bean>
+<bean id="book1" class="com.Teacher.jdbc.TeacherPenExample.Books" >
+
+
+</bean>
+<bean id="book2" class="com.Teacher.jdbc.TeacherPenExample.Books" >
+
+
+</bean>
+
+</beans>
+ 

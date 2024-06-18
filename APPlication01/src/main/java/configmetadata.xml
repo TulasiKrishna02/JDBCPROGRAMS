@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean name="customer" class="com.krishna.APPlication01.Student">
+    
+   <property name="rollNumber" value="101"/>
+   <property name="studentName" value="Tulasi"/>
+   <property name="aggrigateMarks" value="100"/>
+   <property name="course" ref="course"/>
+   <property name="skillSet">
+     <list>
+      <value>JAVA</value>
+      <value>Spring</value>
+      <value>SPringboot</value>
+      <value>AWS</value>
+     
+     
+     </list>
+   
+   </property>
+   <property name="setofHobbies">
+   <set>
+     <value>playing</value>
+     <value>chatting</value>
+     <value>watching movie</value>
+   </set>
+   
+   </property>
+   
+   </bean>
+   <bean name="course" class="com.krishna.APPlication01.Course">
+   <property name="courseId" value="c-111"/>
+   <property name="courseName" value="JAVA"/>
+   <property name="courseCost" value="50000"></property>
+   
+   </bean>
+  
+      
+      
+   
+ 
+
+
+</beans>
+ 

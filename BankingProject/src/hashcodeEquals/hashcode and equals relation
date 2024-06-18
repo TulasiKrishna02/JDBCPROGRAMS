@@ -1,0 +1,15 @@
+hashCode()     |    equals()    | Treated as | Description
+No             |      No        | Duplicate  | Stored in different buckets.
+                                             | Treated as different object.
+
+Yes            |      No        | Duplicate  | Stored in same bucket.
+                                             | Treated as different object. 
+                                             | Because, the default(Object) equals method will check only the reference of objects.     
+
+No             |      Yes       | Duplicate  | Stored in different buckets.
+											   Treated as different object
+
+Yes(hashlogic) |      Yes       | Unique     | Stored in same bucket.Treated as same object.Efficient.
+
+Yes(constant)  |      Yes       | Unique     | Stored in same bucket.Treated as same object.
+                                             | Inefficient, because it will iterate bucket elements for equality check.
